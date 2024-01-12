@@ -1,22 +1,22 @@
-﻿int[] array = { 1, 2, 3, 4, 5 };
+﻿// Задайте массив. Напишите программу, которая определяет, присутствует ли заданное число в массиве. Программа должна выдать ответ: Да/Нет.
+int[] array = { 1, 2, 3, 4, 5 };
 int target = 5;
 
-bool flag = false; // флаг опущен (не посещался, нет такого элемента в массиве)
+bool flag = false; // изначально флаг опущен (не посещался, нет такого элемента в массиве)
 
-foreach (int elem in array)
+foreach (int elem in array) // используется данный цикл foreach, потому что значение переменной в массиве не меняется
 {
     if (elem == target)
     {
-        // Console.WriteLine(elem);
         flag = true;
     }
 }
 
 if (flag == true)
 {
-    Console.WriteLine($"Присутствует");
+    Console.WriteLine($"Число {target} => присутствует в заданном массиве");
 }
 else
 {
-    Console.WriteLine($"Не присутствует");
+    Console.WriteLine($"Число {target} => отсутствует в заданном массиве");
 }
